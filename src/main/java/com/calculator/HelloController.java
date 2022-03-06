@@ -1,13 +1,8 @@
 package com.calculator;
 
-import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
-import javafx.scene.input.KeyCode;
-import javafx.scene.input.KeyEvent;
-import javafx.scene.layout.AnchorPane;
 
 
 public class HelloController {
@@ -18,9 +13,6 @@ public class HelloController {
 
     @FXML
     private TextField inputTF;
-
-    @FXML
-    private AnchorPane anchorPane;
 
     @FXML
     private Button oneBT;
@@ -76,213 +68,69 @@ public class HelloController {
     @FXML
     protected void onHelloButtonClick() {
         actionButtonsCliked();
-        actionButtonsPressed();
+
     }
 
    public void actionButtonsCliked(){
-        zeroBT.setOnAction(new EventHandler<ActionEvent>() {
-            @Override
-            public void handle(ActionEvent actionEvent) {
-                inputTF.setText(inputTF.getText() + "0");
-            }
+        zeroBT.setOnAction(actionEvent -> inputTF.setText(inputTF.getText() + "0"));
+        oneBT.setOnAction(actionEvent -> inputTF.setText(inputTF.getText() + "1"));
+        twoBT.setOnAction(actionEvent -> inputTF.setText(inputTF.getText() + "2"));
+        threeBT.setOnAction(actionEvent -> inputTF.setText(inputTF.getText() + "3"));
+        fourBT.setOnAction(actionEvent -> inputTF.setText(inputTF.getText() + "4"));
+        fiveBT.setOnAction(actionEvent -> inputTF.setText(inputTF.getText() + "5"));
+        sixBT.setOnAction(actionEvent -> inputTF.setText(inputTF.getText() + "6"));
+        sevenBT.setOnAction(actionEvent -> inputTF.setText(inputTF.getText() + "7"));
+        eightBT.setOnAction(actionEvent -> inputTF.setText(inputTF.getText() + "8"));
+        nineBT.setOnAction(actionEvent -> inputTF.setText(inputTF.getText() + "9"));
+        clearBT.setOnAction(actionEvent -> {
+            inputTF.clear();
+            a = 0;
+            b = 0;
+            result = 0;
+            operation = "";
         });
-        oneBT.setOnAction(new EventHandler<ActionEvent>() {
-            @Override
-            public void handle(ActionEvent actionEvent) {
-                inputTF.setText(inputTF.getText() + "1");
-            }
-        });
-        twoBT.setOnAction(new EventHandler<ActionEvent>() {
-            @Override
-            public void handle(ActionEvent actionEvent) {
-                inputTF.setText(inputTF.getText() + "2");
-            }
-        });
-        threeBT.setOnAction(new EventHandler<ActionEvent>() {
-            @Override
-            public void handle(ActionEvent actionEvent) {
-                inputTF.setText(inputTF.getText() + "3");
+        multiBT.setOnAction(actionEvent -> {
+            a = Double.parseDouble(inputTF.getText());
+            inputTF.setText("");
+            operation = "*";
 
-            }
         });
-        fourBT.setOnAction(new EventHandler<ActionEvent>() {
-            @Override
-            public void handle(ActionEvent actionEvent) {
-                inputTF.setText(inputTF.getText() + "4");
-
-            }
+        divBT.setOnAction(actionEvent -> {
+            a = Double.parseDouble(inputTF.getText());
+            inputTF.setText("");
+            operation = "/";
         });
-        fiveBT.setOnAction(new EventHandler<ActionEvent>() {
-            @Override
-            public void handle(ActionEvent actionEvent) {
-                inputTF.setText(inputTF.getText() + "5");
-
-            }
+        sumBT.setOnAction(actionEvent -> {
+            a = Double.parseDouble(inputTF.getText());
+            inputTF.setText("");
+            operation = "+";
         });
-        sixBT.setOnAction(new EventHandler<ActionEvent>() {
-            @Override
-            public void handle(ActionEvent actionEvent) {
-                inputTF.setText(inputTF.getText() + "6");
-
-            }
+        subBT.setOnAction(actionEvent -> {
+            a = Double.parseDouble(inputTF.getText());
+            inputTF.setText("");
+            operation = "-";
         });
-        sevenBT.setOnAction(new EventHandler<ActionEvent>() {
-            @Override
-            public void handle(ActionEvent actionEvent) {
-                inputTF.setText(inputTF.getText() + "7");
-
-            }
-        });
-        eightBT.setOnAction(new EventHandler<ActionEvent>() {
-            @Override
-            public void handle(ActionEvent actionEvent) {
-                inputTF.setText(inputTF.getText() + "8");
-
-            }
-        });
-        nineBT.setOnAction(new EventHandler<ActionEvent>() {
-            @Override
-            public void handle(ActionEvent actionEvent) {
-                inputTF.setText(inputTF.getText() + "9");
-
-            }
-        });
-
-
-        clearBT.setOnAction(new EventHandler<ActionEvent>() {
-            @Override
-            public void handle(ActionEvent actionEvent) {
-                inputTF.clear();
-                a = 0;
-                b = 0;
-                result = 0;
-                operation = "";
-
-            }
-        });
-        multiBT.setOnAction(new EventHandler<ActionEvent>() {
-            @Override
-            public void handle(ActionEvent actionEvent) {
-                a = Double.parseDouble(inputTF.getText());
-                inputTF.setText("");
-                operation = "*";
-            }
-        });
-        divBT.setOnAction(new EventHandler<ActionEvent>() {
-            @Override
-            public void handle(ActionEvent actionEvent) {
-                a = Double.parseDouble(inputTF.getText());
-                inputTF.setText("");
-                operation = "/";
-            }
-        });
-        sumBT.setOnAction(new EventHandler<ActionEvent>() {
-            @Override
-            public void handle(ActionEvent actionEvent) {
-                a = Double.parseDouble(inputTF.getText());
-                inputTF.setText("");
-                operation = "+";
-            }
-        });
-        subBT.setOnAction(new EventHandler<ActionEvent>() {
-            @Override
-            public void handle(ActionEvent actionEvent) {
-                a = Double.parseDouble(inputTF.getText());
-                inputTF.setText("");
-                operation = "-";
-            }
-        });
-        equalBT.setOnAction(new EventHandler<ActionEvent>() {
-            @Override
-            public void handle(ActionEvent actionEvent) {
-                b = Double.parseDouble(inputTF.getText());
-                switch (operation){
-                    case "*":
-                        result = a * b;
-                        inputTF.setText(String.valueOf(result));
-                        break;
-                    case "/":
-                        result = a / b;
-                        inputTF.setText(String.valueOf(result));
-                        break;
-                    case "+":
-                        result = a + b;
-                        inputTF.setText(String.valueOf(result));
-                        break;
-                    case "-":
-                        result = a - b;
-                        inputTF.setText(String.valueOf(result));
-                        break;
-
+        equalBT.setOnAction(actionEvent -> {
+            b = Double.parseDouble(inputTF.getText());
+            switch (operation) {
+                case "*" -> {
+                    result = a * b;
+                    inputTF.setText(String.valueOf(result));
+                }
+                case "/" -> {
+                    result = a / b;
+                    inputTF.setText(String.valueOf(result));
+                }
+                case "+" -> {
+                    result = a + b;
+                    inputTF.setText(String.valueOf(result));
+                }
+                case "-" -> {
+                    result = a - b;
+                    inputTF.setText(String.valueOf(result));
                 }
             }
         });
-        dotBT.setOnAction(new EventHandler<ActionEvent>() {
-            @Override
-            public void handle(ActionEvent actionEvent) {
-                inputTF.setText(inputTF.getText() + ".");
-            }
-        });
+        dotBT.setOnAction(actionEvent -> inputTF.setText(inputTF.getText() + "."));
     }
-    private void actionButtonsPressed() {
-        inputTF.setOnKeyPressed(new EventHandler<KeyEvent>() {
-            @Override
-            public void handle(KeyEvent keyEvent) {
-                if(keyEvent.getCode().equals(KeyCode.ENTER)){
-                    System.out.println("teste" + keyEvent.getCode());
-                    b = Double.parseDouble(inputTF.getText());
-                    switch (operation){
-                        case "*":
-                            result = a * b;
-                            inputTF.setText(String.valueOf(result));
-                            break;
-                        case "/":
-                            result = a / b;
-                            inputTF.setText(String.valueOf(result));
-                            break;
-                        case "+":
-                            result = a + b;
-                            inputTF.setText(String.valueOf(result));
-                            break;
-                        case "-":
-                            result = a - b;
-                            inputTF.setText(String.valueOf(result));
-                            break;
-
-                    }
-                }
-            }
-        });
-    }
-   /* public void actionButtonsPressed(){
-        equalBT.setOnKeyPressed(new EventHandler<KeyEvent>() {
-            @Override
-            public void handle(KeyEvent keyEvent) {
-                if(inputTF.setOnKeyPressed();){
-                    b = Double.parseDouble(inputTF.getText());
-                    switch (operation){
-                        case "*":
-                            result = a * b;
-                            inputTF.setText(String.valueOf(result));
-                            break;
-                        case "/":
-                            result = a / b;
-                            inputTF.setText(String.valueOf(result));
-                            break;
-                        case "+":
-                            result = a + b;
-                            inputTF.setText(String.valueOf(result));
-                            break;
-                        case "-":
-                            result = a - b;
-                            inputTF.setText(String.valueOf(result));
-                            break;
-
-                    }
-                }
-
-            }
-        });*/
-    }
-
-
+}

@@ -4,8 +4,8 @@ import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
-import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.AnchorPane;
 
@@ -17,141 +17,142 @@ public class HelloController {
     String operation;
 
     @FXML
-    private TextField inputText;
+    private TextField inputTF;
 
     @FXML
     private AnchorPane anchorPane;
 
     @FXML
-    private Button one;
+    private Button oneBT;
 
     @FXML
-    private Button two;
+    private Button twoBT;
 
     @FXML
-    private Button three;
+    private Button threeBT;
 
     @FXML
-    private Button four;
+    private Button fourBT;
 
     @FXML
-    private Button five;
+    private Button fiveBT;
 
     @FXML
-    private Button six;
+    private Button sixBT;
 
     @FXML
-    private Button seven;
+    private Button sevenBT;
 
     @FXML
-    private Button eight;
+    private Button eightBT;
 
     @FXML
-    private Button nine;
+    private Button nineBT;
 
     @FXML
-    private Button zero;
+    private Button zeroBT;
 
     @FXML
-    private Button sum;
+    private Button sumBT;
 
     @FXML
-    private Button sub;
+    private Button subBT;
 
     @FXML
-    private Button div;
+    private Button divBT;
 
     @FXML
-    private Button multi;
+    private Button multiBT;
 
     @FXML
-    private Button dot;
+    private Button dotBT;
 
     @FXML
-    private Button equal;
+    private Button equalBT;
 
     @FXML
-    private Button clear;
+    private Button clearBT;
 
     @FXML
     protected void onHelloButtonClick() {
         actionButtonsCliked();
-        inputText.requestFocus();
+        actionButtonsPressed();
     }
-    public void actionButtonsCliked(){
-        zero.setOnAction(new EventHandler<ActionEvent>() {
+
+   public void actionButtonsCliked(){
+        zeroBT.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent actionEvent) {
-                inputText.setText(inputText.getText() + "0");
+                inputTF.setText(inputTF.getText() + "0");
             }
         });
-        one.setOnAction(new EventHandler<ActionEvent>() {
+        oneBT.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent actionEvent) {
-                inputText.setText(inputText.getText() + "1");
+                inputTF.setText(inputTF.getText() + "1");
             }
         });
-        two.setOnAction(new EventHandler<ActionEvent>() {
+        twoBT.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent actionEvent) {
-                inputText.setText(inputText.getText() + "2");
+                inputTF.setText(inputTF.getText() + "2");
             }
         });
-        three.setOnAction(new EventHandler<ActionEvent>() {
+        threeBT.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent actionEvent) {
-                inputText.setText(inputText.getText() + "3");
+                inputTF.setText(inputTF.getText() + "3");
 
             }
         });
-        four.setOnAction(new EventHandler<ActionEvent>() {
+        fourBT.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent actionEvent) {
-                inputText.setText(inputText.getText() + "4");
+                inputTF.setText(inputTF.getText() + "4");
 
             }
         });
-        five.setOnAction(new EventHandler<ActionEvent>() {
+        fiveBT.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent actionEvent) {
-                inputText.setText(inputText.getText() + "5");
+                inputTF.setText(inputTF.getText() + "5");
 
             }
         });
-        six.setOnAction(new EventHandler<ActionEvent>() {
+        sixBT.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent actionEvent) {
-                inputText.setText(inputText.getText() + "6");
+                inputTF.setText(inputTF.getText() + "6");
 
             }
         });
-        seven.setOnAction(new EventHandler<ActionEvent>() {
+        sevenBT.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent actionEvent) {
-                inputText.setText(inputText.getText() + "7");
+                inputTF.setText(inputTF.getText() + "7");
 
             }
         });
-        eight.setOnAction(new EventHandler<ActionEvent>() {
+        eightBT.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent actionEvent) {
-                inputText.setText(inputText.getText() + "8");
+                inputTF.setText(inputTF.getText() + "8");
 
             }
         });
-        nine.setOnAction(new EventHandler<ActionEvent>() {
+        nineBT.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent actionEvent) {
-                inputText.setText(inputText.getText() + "9");
+                inputTF.setText(inputTF.getText() + "9");
 
             }
         });
 
 
-        clear.setOnAction(new EventHandler<ActionEvent>() {
+        clearBT.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent actionEvent) {
-                inputText.clear();
+                inputTF.clear();
                 a = 0;
                 b = 0;
                 result = 0;
@@ -159,134 +160,129 @@ public class HelloController {
 
             }
         });
-        multi.setOnAction(new EventHandler<ActionEvent>() {
+        multiBT.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent actionEvent) {
-                a = Double.parseDouble(inputText.getText());
-                inputText.setText("");
+                a = Double.parseDouble(inputTF.getText());
+                inputTF.setText("");
                 operation = "*";
             }
         });
-        div.setOnAction(new EventHandler<ActionEvent>() {
+        divBT.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent actionEvent) {
-                a = Double.parseDouble(inputText.getText());
-                inputText.setText("");
+                a = Double.parseDouble(inputTF.getText());
+                inputTF.setText("");
                 operation = "/";
             }
         });
-        sum.setOnAction(new EventHandler<ActionEvent>() {
+        sumBT.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent actionEvent) {
-                a = Double.parseDouble(inputText.getText());
-                inputText.setText("");
+                a = Double.parseDouble(inputTF.getText());
+                inputTF.setText("");
                 operation = "+";
             }
         });
-        sub.setOnAction(new EventHandler<ActionEvent>() {
+        subBT.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent actionEvent) {
-                a = Double.parseDouble(inputText.getText());
-                inputText.setText("");
+                a = Double.parseDouble(inputTF.getText());
+                inputTF.setText("");
                 operation = "-";
             }
         });
-        equal.setOnAction(new EventHandler<ActionEvent>() {
+        equalBT.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent actionEvent) {
-                b = Double.parseDouble(inputText.getText());
-
+                b = Double.parseDouble(inputTF.getText());
                 switch (operation){
                     case "*":
                         result = a * b;
-                        inputText.setText(String.valueOf(result));
+                        inputTF.setText(String.valueOf(result));
                         break;
                     case "/":
                         result = a / b;
-                        inputText.setText(String.valueOf(result));
+                        inputTF.setText(String.valueOf(result));
                         break;
                     case "+":
                         result = a + b;
-                        inputText.setText(String.valueOf(result));
+                        inputTF.setText(String.valueOf(result));
                         break;
                     case "-":
                         result = a - b;
-                        inputText.setText(String.valueOf(result));
+                        inputTF.setText(String.valueOf(result));
                         break;
 
                 }
             }
         });
-        dot.setOnAction(new EventHandler<ActionEvent>() {
+        dotBT.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent actionEvent) {
-                inputText.setText(inputText.getText() + ".");
+                inputTF.setText(inputTF.getText() + ".");
             }
         });
     }
+    private void actionButtonsPressed() {
+        inputTF.setOnKeyPressed(new EventHandler<KeyEvent>() {
+            @Override
+            public void handle(KeyEvent keyEvent) {
+                if(keyEvent.getCode().equals(KeyCode.ENTER)){
+                    System.out.println("teste" + keyEvent.getCode());
+                    b = Double.parseDouble(inputTF.getText());
+                    switch (operation){
+                        case "*":
+                            result = a * b;
+                            inputTF.setText(String.valueOf(result));
+                            break;
+                        case "/":
+                            result = a / b;
+                            inputTF.setText(String.valueOf(result));
+                            break;
+                        case "+":
+                            result = a + b;
+                            inputTF.setText(String.valueOf(result));
+                            break;
+                        case "-":
+                            result = a - b;
+                            inputTF.setText(String.valueOf(result));
+                            break;
 
-    public void actionButtonsPressed(){
-        zero.setOnKeyPressed(new EventHandler<KeyEvent>() {
-            @Override
-            public void handle(KeyEvent keyEvent) {
-                inputText.setText(inputText.getText() + "0");
+                    }
+                }
             }
         });
-        one.setOnKeyPressed(new EventHandler<KeyEvent>() {
+    }
+   /* public void actionButtonsPressed(){
+        equalBT.setOnKeyPressed(new EventHandler<KeyEvent>() {
             @Override
             public void handle(KeyEvent keyEvent) {
-                inputText.setText(inputText.getText() + "1");
-            }
-        });
-        two.setOnKeyPressed(new EventHandler<KeyEvent>() {
-            @Override
-            public void handle(KeyEvent keyEvent) {
-                inputText.setText(inputText.getText() + "2");
-            }
-        });
-        three.setOnKeyPressed(new EventHandler<KeyEvent>() {
-            @Override
-            public void handle(KeyEvent keyEvent) {
-                inputText.setText(inputText.getText() + "3");
-            }
-        });
-        four.setOnKeyPressed(new EventHandler<KeyEvent>() {
-            @Override
-            public void handle(KeyEvent keyEvent) {
-                inputText.setText(inputText.getText() + "4");
-            }
-        });
-        five.setOnKeyPressed(new EventHandler<KeyEvent>() {
-            @Override
-            public void handle(KeyEvent keyEvent) {
-                inputText.setText(inputText.getText() + "5");
-            }
-        });
-        six.setOnKeyPressed(new EventHandler<KeyEvent>() {
-            @Override
-            public void handle(KeyEvent keyEvent) {
-                inputText.setText(inputText.getText() + "6");
-            }
-        });
-        seven.setOnKeyPressed(new EventHandler<KeyEvent>() {
-            @Override
-            public void handle(KeyEvent keyEvent) {
-                inputText.setText(inputText.getText() + "7");
-            }
-        });
-        eight.setOnKeyPressed(new EventHandler<KeyEvent>() {
-            @Override
-            public void handle(KeyEvent keyEvent) {
-                inputText.setText(inputText.getText() + "8");
-            }
-        });
-        nine.setOnKeyPressed(new EventHandler<KeyEvent>() {
-            @Override
-            public void handle(KeyEvent keyEvent) {
-                inputText.setText(inputText.getText() + "9");
-            }
-        });
+                if(inputTF.setOnKeyPressed();){
+                    b = Double.parseDouble(inputTF.getText());
+                    switch (operation){
+                        case "*":
+                            result = a * b;
+                            inputTF.setText(String.valueOf(result));
+                            break;
+                        case "/":
+                            result = a / b;
+                            inputTF.setText(String.valueOf(result));
+                            break;
+                        case "+":
+                            result = a + b;
+                            inputTF.setText(String.valueOf(result));
+                            break;
+                        case "-":
+                            result = a - b;
+                            inputTF.setText(String.valueOf(result));
+                            break;
 
+                    }
+                }
+
+            }
+        });*/
     }
 
-}
+

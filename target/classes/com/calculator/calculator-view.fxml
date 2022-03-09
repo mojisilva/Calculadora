@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="478.0" prefWidth="320.0" style="-fx-background-color: #808080;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.calculator.CalculatorController">
+   <TextField fx:id="inputTF" alignment="CENTER_RIGHT" layoutX="12.0" layoutY="7.0" prefHeight="160.0" prefWidth="298.0" style="-fx-background-color: #dcdcdc;" AnchorPane.bottomAnchor="311.0" AnchorPane.leftAnchor="11.0" AnchorPane.rightAnchor="11.0" AnchorPane.topAnchor="10.0">
+      <font>
+         <Font size="24.0" />
+      </font>
+      <cursor>
+         <Cursor fx:constant="NONE" />
+      </cursor>
+      <opaqueInsets>
+         <Insets />
+      </opaqueInsets>
+   </TextField>
+   <Button focusTraversable="false" layoutX="11.0" layoutY="418.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#zeroButtonClick" prefHeight="50.0" prefWidth="144.0" style="-fx-background-color: #d3d3d3;" text="0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="11.0" AnchorPane.rightAnchor="165.0" />
+   <Button focusTraversable="false" layoutX="11.0" layoutY="358.0" mnemonicParsing="false" onAction="#oneButtonClick" prefHeight="50.0" prefWidth="67.0" style="-fx-background-color: #d3d3d3;" text="1" AnchorPane.rightAnchor="242.0" />
+   <Button focusTraversable="false" layoutX="88.0" layoutY="358.0" mnemonicParsing="false" onAction="#twoButtonClick" prefHeight="50.0" prefWidth="67.0" style="-fx-background-color: #d3d3d3;" text="2" />
+   <Button focusTraversable="false" layoutX="164.0" layoutY="358.0" mnemonicParsing="false" onAction="#threeButtonClick" prefHeight="50.0" prefWidth="67.0" style="-fx-background-color: #d3d3d3;" text="3" />
+   <Button focusTraversable="false" layoutX="11.0" layoutY="298.0" mnemonicParsing="false" onAction="#fourButtonClick" prefHeight="50.0" prefWidth="67.0" style="-fx-background-color: #d3d3d3;" text="4" AnchorPane.rightAnchor="242.0" />
+   <Button focusTraversable="false" layoutX="88.0" layoutY="298.0" mnemonicParsing="false" onAction="#fiveButtonClick" prefHeight="50.0" prefWidth="67.0" style="-fx-background-color: #d3d3d3;" text="5" />
+   <Button focusTraversable="false" layoutX="164.0" layoutY="298.0" mnemonicParsing="false" onAction="#sixButtonClick" prefHeight="50.0" prefWidth="67.0" style="-fx-background-color: #d3d3d3;" text="6" />
+   <Button focusTraversable="false" layoutX="11.0" layoutY="240.0" mnemonicParsing="false" onAction="#sevenButtonClick" prefHeight="50.0" prefWidth="67.0" style="-fx-background-color: #d3d3d3;" text="7" AnchorPane.rightAnchor="242.0" />
+   <Button focusTraversable="false" layoutX="88.0" layoutY="240.0" mnemonicParsing="false" onAction="#eightButtonClick" prefHeight="50.0" prefWidth="67.0" style="-fx-background-color: #d3d3d3;" text="8" />
+   <Button focusTraversable="false" layoutX="164.0" layoutY="240.0" mnemonicParsing="false" onAction="#nineButtonClick" prefHeight="50.0" prefWidth="67.0" style="-fx-background-color: #d3d3d3;" text="9" />
+   <Button focusTraversable="false" layoutX="164.0" layoutY="418.0" mnemonicParsing="false" onAction="#dotButtonClick" prefHeight="50.0" prefWidth="67.0" style="-fx-background-color: #d3d3d3;" text="." AnchorPane.bottomAnchor="10.0" />
+   <Button focusTraversable="false" layoutX="241.0" layoutY="358.0" mnemonicParsing="false" onAction="#equalButton" prefHeight="110.0" prefWidth="67.0" style="-fx-background-color: #d3d3d3;" text="=" AnchorPane.bottomAnchor="10.0" />
+   <Button focusTraversable="false" layoutX="241.0" layoutY="298.0" mnemonicParsing="false" onAction="#sumButton" prefHeight="50.0" prefWidth="67.0" style="-fx-background-color: #d3d3d3;" text="+" />
+   <Button focusTraversable="false" layoutX="241.0" layoutY="240.0" mnemonicParsing="false" onAction="#subButton" prefHeight="50.0" prefWidth="67.0" style="-fx-background-color: #d3d3d3;" text="-" />
+   <Button focusTraversable="false" layoutX="164.0" layoutY="180.0" mnemonicParsing="false" onAction="#divButton" prefHeight="50.0" prefWidth="67.0" style="-fx-background-color: #d3d3d3;" text="/" />
+   <Button focusTraversable="false" layoutX="241.0" layoutY="180.0" mnemonicParsing="false" onAction="#multiButton" prefHeight="50.0" prefWidth="67.0" style="-fx-background-color: #d3d3d3;" text="*" />
+   <Button focusTraversable="false" layoutX="11.0" layoutY="180.0" mnemonicParsing="false" onAction="#clearButtonClick" prefHeight="50.0" prefWidth="144.0" style="-fx-background-color: #d3d3d3;" text="Clear" />
+   </AnchorPane>

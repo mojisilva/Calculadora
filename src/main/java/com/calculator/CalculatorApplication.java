@@ -17,6 +17,7 @@ public class CalculatorApplication extends Application {
         stage.setTitle("Calculator");
         stage.getIcons().add(new Image(Objects.requireNonNull(CalculatorApplication.class.getResourceAsStream("icon.png"))));
         stage.setScene(scene);
+        stage.setResizable(false);
         stage.show();
     }
 

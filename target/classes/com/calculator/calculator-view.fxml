@@ -30,9 +30,9 @@
    <Button focusTraversable="false" layoutX="164.0" layoutY="240.0" mnemonicParsing="false" onAction="#nineButtonClick" prefHeight="50.0" prefWidth="67.0" style="-fx-background-color: #d3d3d3;" text="9" />
    <Button focusTraversable="false" layoutX="164.0" layoutY="418.0" mnemonicParsing="false" onAction="#dotButtonClick" prefHeight="50.0" prefWidth="67.0" style="-fx-background-color: #d3d3d3;" text="." AnchorPane.bottomAnchor="10.0" />
    <Button focusTraversable="false" layoutX="241.0" layoutY="358.0" mnemonicParsing="false" onAction="#equalButton" prefHeight="110.0" prefWidth="67.0" style="-fx-background-color: #d3d3d3;" text="=" AnchorPane.bottomAnchor="10.0" />
-   <Button focusTraversable="false" layoutX="241.0" layoutY="298.0" mnemonicParsing="false" onAction="#sumButton" prefHeight="50.0" prefWidth="67.0" style="-fx-background-color: #d3d3d3;" text="+" />
+   <Button fx:id="btsum" focusTraversable="false" layoutX="241.0" layoutY="298.0" mnemonicParsing="false" onAction="#sumButton" prefHeight="50.0" prefWidth="67.0" style="-fx-background-color: #d3d3d3;" text="+" />
    <Button focusTraversable="false" layoutX="241.0" layoutY="240.0" mnemonicParsing="false" onAction="#subButton" prefHeight="50.0" prefWidth="67.0" style="-fx-background-color: #d3d3d3;" text="-" />
    <Button focusTraversable="false" layoutX="164.0" layoutY="180.0" mnemonicParsing="false" onAction="#divButton" prefHeight="50.0" prefWidth="67.0" style="-fx-background-color: #d3d3d3;" text="/" />
    <Button focusTraversable="false" layoutX="241.0" layoutY="180.0" mnemonicParsing="false" onAction="#multiButton" prefHeight="50.0" prefWidth="67.0" style="-fx-background-color: #d3d3d3;" text="*" />
-   <Button focusTraversable="false" layoutX="11.0" layoutY="180.0" mnemonicParsing="false" onAction="#clearButtonClick" prefHeight="50.0" prefWidth="144.0" style="-fx-background-color: #d3d3d3;" text="Clear" />
+   <Button focusTraversable="false" layoutX="11.0" layoutY="180.0" mnemonicParsing="false" onAction="#clearButtonClick" prefHeight="50.0" prefWidth="144.0" style="-fx-background-color: #d3d3d3;" text="Clean" />
    </AnchorPane>
